@@ -1,0 +1,17 @@
+{
+  "name": "user-org-creation",
+  "version": "1.0.0",
+  "description": "CLI tool to create/delete test organizations and users using WorkOS APIs",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/cli.ts"
+  },
+  "dependencies": {
+    "@workos-inc/node": "^7.0.0",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0"
+  }
+}
