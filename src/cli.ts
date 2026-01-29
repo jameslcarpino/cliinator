@@ -345,7 +345,9 @@ async function main() {
         50,
       );
 
-      console.log(`Done - deleted ${deleted} users${failed > 0 ? `, ${failed} failed` : ""}`);
+      console.log(
+        `Done - deleted ${deleted} users${failed > 0 ? `, ${failed} failed` : ""}`,
+      );
     },
 
     async deleteAllOrgs() {
@@ -390,10 +392,15 @@ async function main() {
               msg.includes("unable to delete")
             ) {
               skipped++;
-              console.log(`Skipped org "${org.name}" (${org.id}) - cannot be deleted`);
+              console.log(
+                `Skipped org "${org.name}" (${org.id}) - cannot be deleted`,
+              );
             } else {
               failed++;
-              console.error(`Failed to delete org "${org.name}" (${org.id}):`, error.message);
+              console.error(
+                `Failed to delete org "${org.name}" (${org.id}):`,
+                error.message,
+              );
             }
           }
         },
@@ -433,13 +440,18 @@ async function main() {
             console.log(`Deleted membership ${m.id}`);
           } catch (error: any) {
             failed++;
-            console.error(`Failed to delete membership ${m.id}:`, error.message);
+            console.error(
+              `Failed to delete membership ${m.id}:`,
+              error.message,
+            );
           }
         },
         50,
       );
 
-      console.log(`Done - deleted ${deleted} memberships${failed > 0 ? `, ${failed} failed` : ""}`);
+      console.log(
+        `Done - deleted ${deleted} memberships${failed > 0 ? `, ${failed} failed` : ""}`,
+      );
     },
 
     async deleteOrg(args) {
